@@ -1,0 +1,20 @@
+Task
+Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
+The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value
+Mind the input validation.
+
+
+function sumArray(array) {
+    return array.length < 2 ? 0
+         : array.reduce((a, b) => a + b) - Math.min(...array) - Math.max(...array);
+}
+console.log(
+    sumArray([6, 2, 1, 8, 10])
+)  
+
+
+#steps
+ The code is calculating the sum of an array.
+ The code starts by checking if the length of the array is less than 2, and if it is then it returns 0.
+ If not, then it calculates the sum of all elements in the array minus Math.min(...array) and plus Math.max(...array).
+ The code will return the sum of all numbers in the array.
