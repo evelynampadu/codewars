@@ -17,3 +17,26 @@ console.log(
  The code starts by checking if the length of the array is less than 2, and if it is then it returns 0.
  If not, then it calculates the sum of all elements in the array minus Math.min(...array) and plus Math.max(...array).
  The code will return the sum of all numbers in the array.
+
+
+
+
+OR
+
+
+
+const sumNums = (acc, cur) => acc + cur
+
+function sumArray(array) {
+    return Array.isArray(array) && array.length > 1
+            ? array.reduce(sumNums, 0) - Math.min(...array) - Math.max(...array)
+            : 0
+}
+
+
+#steps
+ The code is a function that takes an array and returns the sum of all the numbers in it.
+ The code starts by checking if the input is an array, then iterates through each element of the input to find its sum.
+ If there are more than one elements in the input, then it will use reduce() to add up all of them before returning 0.
+ The code attempts to calculate the sum of an array.
+ If the input is not an array, then it will return 0.
